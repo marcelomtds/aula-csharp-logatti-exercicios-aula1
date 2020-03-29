@@ -4,25 +4,19 @@ namespace Ex11
 {
     class Program
     {
-        static int quantidade = 5;
-        static double[] temperaturas;
+        private static double[] temperaturas = new double[5];
+        private static double somaTemperaturas = 0.0;
         static void Main(string[] args)
         {
-            temperaturas = new double[5];
-            for (int i = 0; i < quantidade; i++)
-            {
-                Console.Write($"Informe a {i + 1}ª temperatura: ");
-                temperaturas[i] = Convert.ToDouble(Console.ReadLine());
-            }
+            LerDados();
             Calcular();
+            ImprimirResultado();
         }
-
-        static void Calcular()
+        private static void Calcular()
         {
-            double totalTemperatura = 0.0;
-            for (int i = 0; i < quantidade; i++)
+            for (int i = 0; i < temperaturas.Length; i++)
             {
-                for (int j = 0; j < quantidade - 1; j++)
+                for (int j = 0; j < temperaturas.Length - 1; j++)
                 {
                     if (temperaturas[i] > temperaturas[j])
                     {
@@ -31,11 +25,22 @@ namespace Ex11
                         temperaturas[j] = auxiliar;
                     }
                 }
-                totalTemperatura += temperaturas[i];
+                somaTemperaturas += temperaturas[i];
             }
-            Console.WriteLine($"Menor temperatura: {temperaturas[temperaturas.Length - 1]}.");
-            Console.WriteLine($"Maior temperatura: {temperaturas[0]}.");
-            Console.WriteLine($"Temperatura média: {(totalTemperatura / quantidade).ToString("0.00")}");
+        }
+        private static void LerDados()
+        {
+            for (int i = 0; i < temperaturas.Length; i++)
+            {
+                Console.Write($"Informe a {i + 1}ª temperatura: ");
+                temperaturas[i] = Convert.ToDouble(Console.ReadLine());
+            }
+        }
+        private static void ImprimirResultado()
+        {
+            Console.WriteLine($"Menor temperatura: {temperaturas[temperaturas.Length - 1]}");
+            Console.WriteLine($"Maior temperatura: {temperaturas[0]}");
+            Console.WriteLine($"Temperatura média: {(somaTemperaturas / temperaturas.Length).ToString("0.00")}");
         }
     }
 }

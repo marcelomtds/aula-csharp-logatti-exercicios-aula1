@@ -4,14 +4,17 @@ namespace Ex10
 {
     class Program
     {
-        static Habitante[] habitantes;
-        static int quantidadeHabitantes = 4;
-        static double menorSalario = 150.00;
-        static double maiorSalario = 0.00;
+        private static Habitante[] habitantes = new Habitante[4];
+        private static double menorSalario = 150.00;
+
         static void Main(string[] args)
         {
-            habitantes = new Habitante[quantidadeHabitantes];
-            for (int i = 0; i < quantidadeHabitantes; i++)
+            LerDados();
+            ImprimirResultado();
+        }
+        private static void LerDados()
+        {
+            for (int i = 0; i < habitantes.Length; i++)
             {
                 Habitante habitante = new Habitante();
                 Console.Write($"Informe o salário do {i + 1}º habitante: ");
@@ -20,48 +23,65 @@ namespace Ex10
                 habitante.quantidadeFilho = Convert.ToInt16(Console.ReadLine());
                 habitantes[i] = habitante;
             }
-            calcular();
-            calcularMaiorSalario();
         }
 
-        static void calcularMaiorSalario()
+        private static double CalcularMaiorSalario()
         {
-            for (int i = 0; i < quantidadeHabitantes; i++)
+            double maiorSalario = 0.0;
+            for (int i = 0; i < habitantes.Length; i++)
             {
                 if (habitantes[i].salario > maiorSalario)
                 {
                     maiorSalario = habitantes[i].salario;
                 }
             }
-            Console.WriteLine($"Maior salário dos habitantes: R$ {(maiorSalario).ToString(".00")}.");
+            return maiorSalario;
+        }
+        private static double CalcularMediaSalario()
+        {
+            double salarioTotal = 0.0;
+            for (int i = 0; i < habitantes.Length; i++)
+            {
+                salarioTotal += habitantes[i].salario;
+            }
+            return salarioTotal / habitantes.Length;
+        }
+        private static double CalcularMediaFilho()
+        {
+            int total = 0;
+            for (int i = 0; i < habitantes.Length; i++)
+            {
+                total += habitantes[i].quantidadeFilho;
+            }
+            return Math.Round(Convert.ToDouble(total / habitantes.Length));
         }
 
-        static void calcular()
+        private static double CalcularPercentualMenorSalario()
         {
-            double totalSalario = 0.0;
-            int totalFilho = 0;
-            double salarioMenor = 0.0;
-            int quantidadeSalarioMenor = 0;
-            for (int i = 0; i < quantidadeHabitantes; i++)
+            double total = 0;
+            int quantidade = 0;
+            for (int i = 0; i < habitantes.Length; i++)
             {
                 if (habitantes[i].salario < menorSalario)
                 {
-                    salarioMenor += habitantes[i].salario;
-                    quantidadeSalarioMenor++;
+                    total += habitantes[i].salario;
+                    quantidade++;
                 }
-                totalSalario += habitantes[i].salario;
-                totalFilho += habitantes[i].quantidadeFilho;
             }
-            Console.WriteLine($"Média de salário da população: R$ {totalSalario / quantidadeHabitantes}.");
-            Console.WriteLine($"Média do número de filhos da população: {Math.Round(Convert.ToDouble(totalFilho / quantidadeHabitantes))}.");
-            Console.WriteLine($"Percentual de pessoas com salário menor que R$ 150,00: {100 * quantidadeSalarioMenor / quantidadeHabitantes}%.");
+            return 100 * quantidade / habitantes.Length;
+        }
+        private static void ImprimirResultado()
+        {
+            Console.WriteLine($"Maior salário dos habitantes: R$ {CalcularMaiorSalario().ToString(".00")}.");
+            Console.WriteLine($"Média de salário da população: R$ {CalcularMediaSalario().ToString(".00")}.");
+            Console.WriteLine($"Média do número de filhos da população: {CalcularMediaFilho()}.");
+            Console.WriteLine($"Percentual de pessoas com salário menor que R$ 150,00: {CalcularPercentualMenorSalario().ToString(".00")}%.");
         }
 
     }
-
-    public class Habitante
+    class Habitante
     {
-        public int quantidadeFilho;
-        public double salario;
+        public int quantidadeFilho { get; set; }
+        public double salario { get; set; }
     }
 }

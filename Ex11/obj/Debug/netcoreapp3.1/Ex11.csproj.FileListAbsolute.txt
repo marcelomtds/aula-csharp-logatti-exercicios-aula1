@@ -8,3 +8,13 @@ C:\Users\Marcelo\source\repos\ExerciciosAula1\Ex11\obj\Debug\netcoreapp3.1\Ex11.
 C:\Users\Marcelo\source\repos\ExerciciosAula1\Ex11\obj\Debug\netcoreapp3.1\Ex11.AssemblyInfo.cs
 C:\Users\Marcelo\source\repos\ExerciciosAula1\Ex11\obj\Debug\netcoreapp3.1\Ex11.dll
 C:\Users\Marcelo\source\repos\ExerciciosAula1\Ex11\obj\Debug\netcoreapp3.1\Ex11.pdb
+C:\projetos\logatti\csharp\ExerciciosAula1\Ex11\bin\Debug\netcoreapp3.1\Ex11.exe
+C:\projetos\logatti\csharp\ExerciciosAula1\Ex11\bin\Debug\netcoreapp3.1\Ex11.deps.json
+C:\projetos\logatti\csharp\ExerciciosAula1\Ex11\bin\Debug\netcoreapp3.1\Ex11.runtimeconfig.json
+C:\projetos\logatti\csharp\ExerciciosAula1\Ex11\bin\Debug\netcoreapp3.1\Ex11.runtimeconfig.dev.json
+C:\projetos\logatti\csharp\ExerciciosAula1\Ex11\bin\Debug\netcoreapp3.1\Ex11.dll
+C:\projetos\logatti\csharp\ExerciciosAula1\Ex11\bin\Debug\netcoreapp3.1\Ex11.pdb
+C:\projetos\logatti\csharp\ExerciciosAula1\Ex11\obj\Debug\netcoreapp3.1\Ex11.AssemblyInfoInputs.cache
+C:\projetos\logatti\csharp\ExerciciosAula1\Ex11\obj\Debug\netcoreapp3.1\Ex11.AssemblyInfo.cs
+C:\projetos\logatti\csharp\ExerciciosAula1\Ex11\obj\Debug\netcoreapp3.1\Ex11.dll
+C:\projetos\logatti\csharp\ExerciciosAula1\Ex11\obj\Debug\netcoreapp3.1\Ex11.pdb

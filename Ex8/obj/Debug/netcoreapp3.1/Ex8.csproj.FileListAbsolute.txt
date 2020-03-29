@@ -9,3 +9,14 @@ C:\Users\Marcelo\source\repos\ExerciciosAula1\Ex8\obj\Debug\netcoreapp3.1\Ex8.As
 C:\Users\Marcelo\source\repos\ExerciciosAula1\Ex8\obj\Debug\netcoreapp3.1\Ex8.AssemblyInfo.cs
 C:\Users\Marcelo\source\repos\ExerciciosAula1\Ex8\obj\Debug\netcoreapp3.1\Ex8.dll
 C:\Users\Marcelo\source\repos\ExerciciosAula1\Ex8\obj\Debug\netcoreapp3.1\Ex8.pdb
+C:\projetos\logatti\csharp\ExerciciosAula1\Ex8\bin\Debug\netcoreapp3.1\Ex8.exe
+C:\projetos\logatti\csharp\ExerciciosAula1\Ex8\bin\Debug\netcoreapp3.1\Ex8.deps.json
+C:\projetos\logatti\csharp\ExerciciosAula1\Ex8\bin\Debug\netcoreapp3.1\Ex8.runtimeconfig.json
+C:\projetos\logatti\csharp\ExerciciosAula1\Ex8\bin\Debug\netcoreapp3.1\Ex8.runtimeconfig.dev.json
+C:\projetos\logatti\csharp\ExerciciosAula1\Ex8\bin\Debug\netcoreapp3.1\Ex8.dll
+C:\projetos\logatti\csharp\ExerciciosAula1\Ex8\bin\Debug\netcoreapp3.1\Ex8.pdb
+C:\projetos\logatti\csharp\ExerciciosAula1\Ex8\obj\Debug\netcoreapp3.1\Ex8.csprojAssemblyReference.cache
+C:\projetos\logatti\csharp\ExerciciosAula1\Ex8\obj\Debug\netcoreapp3.1\Ex8.AssemblyInfoInputs.cache
+C:\projetos\logatti\csharp\ExerciciosAula1\Ex8\obj\Debug\netcoreapp3.1\Ex8.AssemblyInfo.cs
+C:\projetos\logatti\csharp\ExerciciosAula1\Ex8\obj\Debug\netcoreapp3.1\Ex8.dll
+C:\projetos\logatti\csharp\ExerciciosAula1\Ex8\obj\Debug\netcoreapp3.1\Ex8.pdb

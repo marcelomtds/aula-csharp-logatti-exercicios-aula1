@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Marcelo\\source\\repos\\ExerciciosAula1\\Ex10\\Ex10.csproj": {}
+    "C:\\projetos\\logatti\\csharp\\ExerciciosAula1\\Ex10\\Ex10.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Marcelo\\source\\repos\\ExerciciosAula1\\Ex10\\Ex10.csproj": {
+    "C:\\projetos\\logatti\\csharp\\ExerciciosAula1\\Ex10\\Ex10.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Marcelo\\source\\repos\\ExerciciosAula1\\Ex10\\Ex10.csproj",
+        "projectUniqueName": "C:\\projetos\\logatti\\csharp\\ExerciciosAula1\\Ex10\\Ex10.csproj",
         "projectName": "Ex10",
-        "projectPath": "C:\\Users\\Marcelo\\source\\repos\\ExerciciosAula1\\Ex10\\Ex10.csproj",
+        "projectPath": "C:\\projetos\\logatti\\csharp\\ExerciciosAula1\\Ex10\\Ex10.csproj",
         "packagesPath": "C:\\Users\\Marcelo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Marcelo\\source\\repos\\ExerciciosAula1\\Ex10\\obj\\",
+        "outputPath": "C:\\projetos\\logatti\\csharp\\ExerciciosAula1\\Ex10\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Marcelo\\AppData\\Roaming\\NuGet\\NuGet.Config",

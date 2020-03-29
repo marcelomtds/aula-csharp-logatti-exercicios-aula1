@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Marcelo\\source\\repos\\ExerciciosAula1\\Ex2\\Ex2.csproj",
+      "projectUniqueName": "C:\\projetos\\logatti\\csharp\\ExerciciosAula1\\Ex2\\Ex2.csproj",
       "projectName": "Ex2",
-      "projectPath": "C:\\Users\\Marcelo\\source\\repos\\ExerciciosAula1\\Ex2\\Ex2.csproj",
+      "projectPath": "C:\\projetos\\logatti\\csharp\\ExerciciosAula1\\Ex2\\Ex2.csproj",
       "packagesPath": "C:\\Users\\Marcelo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Marcelo\\source\\repos\\ExerciciosAula1\\Ex2\\obj\\",
+      "outputPath": "C:\\projetos\\logatti\\csharp\\ExerciciosAula1\\Ex2\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Marcelo\\AppData\\Roaming\\NuGet\\NuGet.Config",

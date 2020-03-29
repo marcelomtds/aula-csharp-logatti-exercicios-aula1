@@ -4,16 +4,26 @@ namespace Ex14
 {
     class Program
     {
-        static int inicial = 15;
-        static int final = 100;
+        private static double media = 0.0;
+        private static int inicial = 15;
+        private static int final = 100;
         static void Main(string[] args)
         {
-            int soma = 0;
+            Calcular();
+            ImprimirResultado();
+        }
+        private static void Calcular()
+        {
+            double soma = 0.0;
             for (int i = inicial; i <= final; i++)
             {
                 soma += i;
             }
-            Console.WriteLine("Média: " + soma / (final - inicial));
+            media = soma / (final - inicial);
+        }
+        private static void ImprimirResultado()
+        {
+            Console.WriteLine($"Média aritmética entre {inicial} (inclusive) e {final} (inclusive): {media.ToString(".00")}");
         }
     }
 }

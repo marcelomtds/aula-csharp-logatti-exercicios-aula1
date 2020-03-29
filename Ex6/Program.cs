@@ -4,20 +4,38 @@ namespace Ex6
 {
     class Program
     {
+        private static double salarioFixo;
+        private static double totalVendas;
+        private static double resultado;
         static void Main(string[] args)
         {
-            Console.Write("Informe o salário fixo: R$ ");
-            double salarioFixo = Convert.ToDouble(Console.ReadLine());
-            Console.Write("Informe o valor total das vendas: R$ ");
-            double totalVendas = Convert.ToDouble(Console.ReadLine());
+            salarioFixo = LerDados("o salário fixo: R$");
+            totalVendas = LerDados("valor total das vendas: R$");
+            Calcular();
+            ImprimirResultado();
+        }
+
+        private static void ImprimirResultado()
+        {
+            Console.Write($"O salário total é de R$ {resultado.ToString(".00")}");
+        }
+
+        private static void Calcular()
+        {
             if (totalVendas <= 1500)
             {
-                Console.Write($"O salário total é de R$ {(totalVendas * 0.03 + salarioFixo).ToString(".00")}");
+                resultado = totalVendas * 0.03 + salarioFixo;
             }
             else
             {
-                Console.Write($"O salário total é de R$ {((totalVendas * 0.03 + salarioFixo) + ((totalVendas - 1500) * 0.05)).ToString(".00")}");
+                resultado = (totalVendas * 0.03 + salarioFixo) + ((totalVendas - 1500) * 0.05);
             }
+        }
+
+        private static double LerDados(string texto)
+        {
+            Console.Write($"Informe o {texto} ");
+            return Convert.ToDouble(Console.ReadLine());
         }
     }
 }

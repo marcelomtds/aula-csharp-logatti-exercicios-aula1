@@ -4,22 +4,41 @@ namespace Ex8
 {
     class Program
     {
+        private static double a;
+        private static double b;
+        private static double c;
+        private static bool isTriangulo;
         static void Main(string[] args)
         {
-            Console.Write("Informe o valor de A: ");
-            double a = Convert.ToDouble(Console.ReadLine());
-            Console.Write("Informe o valor de B: ");
-            double b = Convert.ToDouble(Console.ReadLine());
-            Console.Write("Informe o valor de C: ");
-            double c = Convert.ToDouble(Console.ReadLine());
+            a = LerValor("A");
+            b = LerValor("B");
+            c = LerValor("C");
+            Calcular();
+            ImprimirResultado();
+        }
+
+        private static void ImprimirResultado()
+        {
+            string texto = isTriangulo ? "Forma" : "Não forma";
+            Console.Write($"{texto} um triângulo.");
+        }
+
+        private static void Calcular()
+        {
             if (a < b + c && b < a + c && c < a + b)
             {
-                Console.Write("Forma um triângulo.");
+                isTriangulo = true;
             }
             else
             {
-                Console.Write("Não forma um triângulo.");
+                isTriangulo = false;
             }
+        }
+
+        private static double LerValor(string texto)
+        {
+            Console.Write($"Informe o valor de {texto}: ");
+            return Convert.ToDouble(Console.ReadLine());
         }
     }
 }

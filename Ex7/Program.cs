@@ -4,33 +4,33 @@ namespace Ex7
 {
     class Program
     {
-        static double[] numeros = new double[3];
+        private static double[] numeros = new double[3];
+        private static double maior = 0.0;
         static void Main(string[] args)
         {
-            for (int i = 0; i < 3; i++)
-            {
-            Console.Write($"Informe o {i + 1}º número: ");
-            double numero = Convert.ToDouble(Console.ReadLine());
-                numeros[i] = numero;
-            }
-            ordenarVetor();
-            Console.Write($"O número {numeros[0]} é o maior número informado.");
+            LerValores();
+            ImprimirResultado();
         }
 
-        static void ordenarVetor()
+        private static void ImprimirResultado()
+        {
+            Console.Write($"O número {maior} foi o maior número informado.");
+        }
+
+        private static void LerValores()
         {
             for (int i = 0; i < numeros.Length; i++)
             {
-                for (int j = 0; j < numeros.Length - 1;j++)
-                {
-                    if (numeros[i] > numeros[j])
-                    {
-                        double aux = numeros[i];
-                        numeros[i] = numeros[j];
-                        numeros[j] = aux;
-                    }
-                }
+                Console.Write($"Informe o {i + 1}º número: ");
+                CalcularMaior(Convert.ToDouble(Console.ReadLine()));
+            }
+        }
 
+        static void CalcularMaior(double numero)
+        {
+            if (numero > maior)
+            {
+                maior = numero;
             }
         }
     }

@@ -4,15 +4,32 @@ namespace Ex9
 {
     class Program
     {
-        static Produto[] produtos;
-        static double soma;
-        static int qtd = 3;
-        static double maiorPreco = 0.0;
+        private static Produto[] produtos = new Produto[3];
         static void Main(string[] args)
         {
-            produtos = new Produto[qtd];
-            soma = 0.0;
-            for (int i = 0; i < qtd; i++)
+            LerDados();
+            ImprimirResultado();
+        }
+
+        private static void ImprimirResultado()
+        {
+            Console.WriteLine($"O maior preço lido foi R$ {VerificarMaiorPreco().ToString(".00")}.");
+            Console.Write($"A média do preço dos produtos foi de R$ {CalcularMedia().ToString(".00")}.");
+        }
+
+        private static double CalcularMedia()
+        {
+            double soma = 0.0;
+            for (int i = 0; i < produtos.Length; i++)
+            {
+                soma += produtos[i].preco;
+            }
+            return soma / produtos.Length;
+        }
+
+        private static void LerDados()
+        {
+            for (int i = 0; i < produtos.Length; i++)
             {
                 Produto produto = new Produto();
                 Console.Write($"Informe o código do {i + 1}º produto: ");
@@ -20,32 +37,27 @@ namespace Ex9
                 Console.Write($"Informe o preço do {i + 1}º produto: ");
                 produto.preco = Convert.ToDouble(Console.ReadLine());
                 produtos[i] = produto;
-                soma = soma + produtos[i].preco;
             }
-            MaiorPreco();
-            Console.WriteLine($"O maior preço lido foi R$ {(maiorPreco).ToString(".00")}.");
-            Console.Write($"A média do preço dos produtos foi de R$ {(soma / qtd).ToString(".00")}.");
         }
 
-        static void MaiorPreco()
+        private static double VerificarMaiorPreco()
         {
-            for (int i = 0; i < qtd; i++)
+            double maiorPreco = 0.0;
+            for (int i = 0; i < produtos.Length; i++)
             {
-                for (int j = 0; j < qtd - 1; j++)
+                if (produtos[i].preco > maiorPreco)
                 {
-                    if (produtos[i].preco > maiorPreco)
-                    {
-                        maiorPreco = produtos[i].preco;
-                    }
+                    maiorPreco = produtos[i].preco;
                 }
             }
+            return maiorPreco;
         }
 
     }
     public class Produto
     {
-        public string codigo;
-        public double preco;
+        public string codigo { get; set; }
+        public double preco { get; set; }
     }
 
 }

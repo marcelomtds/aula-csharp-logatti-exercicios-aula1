@@ -4,17 +4,39 @@ namespace Ex4
 {
     class Program
     {
+        private static double salarioFixo;
+        private static double totalVendas;
+        private static int qtdCarroVendido;
+        private static double comissao;
+        private static double resultado;
         static void Main(string[] args)
         {
-            Console.Write("Informe o salário fixo: R$ ");
-            double salarioFixo = Convert.ToDouble(Console.ReadLine());
-            Console.Write("Informe o total de vendas: R$ ");
-            double totalVenda = Convert.ToDouble(Console.ReadLine());
-            Console.Write("Informe o total de carros vendidos: ");
-            int qtdCarroVendido = Convert.ToInt16(Console.ReadLine());
-            Console.Write("Informe o valor da comissão: R$ ");
-            double comissao = Convert.ToDouble(Console.ReadLine());
-            Console.Write($"Salário final: R$ {(salarioFixo + (comissao * qtdCarroVendido) + (totalVenda * 0.05)).ToString(".00")}");
+            salarioFixo = LerValorDouble("salário fixo: R$");
+            totalVendas = LerValorDouble("total de vendas: R$");
+            qtdCarroVendido = LerValorInt("total de carros vendidos:");
+            comissao = LerValorDouble("valor da comissão: R$");
+            CalcularResultado();
+            ImprimirResultado();
         }
+
+        private static double LerValorDouble(string texto)
+        {
+            Console.Write($"Informe o {texto} ");
+            return Convert.ToDouble(Console.ReadLine());
+        }
+        private static int LerValorInt(string texto)
+        {
+            Console.Write($"Informe o {texto} ");
+            return Convert.ToInt16(Console.ReadLine());
+        }
+        private static void CalcularResultado()
+        {
+            resultado = salarioFixo + (comissao * qtdCarroVendido) + (totalVendas * 0.05);
+        }
+        private static void ImprimirResultado()
+        {
+            Console.Write($"Salário final: R$ {resultado.ToString(".00")}");
+        }
+
     }
 }
